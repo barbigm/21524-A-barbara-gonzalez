@@ -1,4 +1,4 @@
-html, body {
+/*html, body {
     height: 100%;
 }
 
@@ -24,12 +24,27 @@ nav {
     max-height: 200px; 
     width: 100%; 
     object-fit: cover;
-}
+}*/
 
-.copyright{
-  padding-top: 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 footer {
-    background: linear-gradient(to top, rgba(0,0,0,1), rgba(255,255,255,0));
+    background: linear-gradient(to top, rgb(156, 252, 21), rgba(255,255,255,0));
+}
+
+.text-center {
+    color: greenyellow;
+}
+
+body {
+    background-color: beige;
+}
+
+#lista-publicaciones {
+    background-color: rgb(156, 252, 21);
+    padding: 10px;
 }

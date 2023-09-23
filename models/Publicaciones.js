@@ -22,11 +22,15 @@ const Publicacion = sequelize.define('Publicacion', {
         type: DataTypes.DATE,
         allowNull: true,
         defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+    },
+    autor: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 },{
-    createdAt: true,
+    /*createdAt: true,
     updateAt: true,
-    deleteAt: true,
+    deleteAt: true,*/
     
     
     timestamps: false,

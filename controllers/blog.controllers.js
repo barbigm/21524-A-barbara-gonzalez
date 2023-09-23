@@ -3,7 +3,7 @@ const Publicacion = require('../models/Publicaciones');
 const ctrl = {}
 
 ctrl.newPost = async (req, res) => {
-    // const { titulo, detalle, url_imagen, fecha_publicacion } = req.body;
+    const { titulo, detalle, url_imagen, fecha_publicacion, autor} = req.body;
 
     try {
         const publicacion = await Publicacion.create(req.body);
@@ -59,8 +59,7 @@ ctrl.updatePost = async (req, res) => {
 ctrl.deletePost = async (req, res) => {
 
     const { id } = req.params;
-
-
+ 
     try {
         await Publicacion.destroy({
             where: {

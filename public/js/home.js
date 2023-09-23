@@ -1,4 +1,4 @@
-import { obtenerPublicaciones, mostrarDatosPublicaciones } from './crud-post.js';
+import { obtenerPublicaciones, mostrarDatosPublicaciones } from './crud-post.js'; 
 
 
 

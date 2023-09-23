@@ -8,3 +8,15 @@ body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
 }
+
+footer {
+    background: linear-gradient(to top, rgb(156, 252, 21), rgba(255,255,255,0));
+}
+
+.text-center {
+    color: greenyellow;
+}
+
+body {
+        background-color: beige;
+}

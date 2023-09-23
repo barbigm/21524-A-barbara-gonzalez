@@ -30,7 +30,7 @@ router.put('/publicacion/:id', updatePost)
 
 router.delete('/publicacion/:id', deletePost)
 
-//___
+/* Creacion de cada ruta sin el archico controllers
 router.post('/publicacion', async (res, req) => {
     const { titulo, detalle , url_imagen, fecha_publicacion} = req.body;
    
@@ -39,18 +39,18 @@ router.post('/publicacion', async (res, req) => {
             titulo, detalle , url_imagen, fecha_publicacion 
         });
     
-        res.send({ msg: "Se ha creado la publicacion con exito"}, publicacion)
+        res.send({ msg: "Se ha creado la publicación con éxito"}, publicacion)
     } catch (error) {
         //console.log(error);
         return res.statusCode(500).json({
-            msg: "Error al crear la publicacion"
+            msg: "Error al crear la publicación"
         })
     }
 
     res.send({ msg: "Se ha creado la publicacion con exito"})
 })
 
-router.get('/publicaciones', async(req, res) => {
+router.get('/publicaciones', async(res, req) => {
     try {
         const publicaciones = await Publicacion.findAll();
         return res.json(publicaciones)
@@ -64,6 +64,17 @@ router.get('/publicaciones', async(req, res) => {
 
 } )
 
-
-
+router.put('/publicacion/:id', async (res, req) => {
+    try {
+        const publicacionid = await Publicacion.update();
+        return res.json(publicacionid)
+    } catch (error) {
+        //console.log(error);
+        return res.statusCode(500).json({
+          msg: "Error al actualizar publicación"
+            
+        })
+    }
+})*/
+ 
 module.exports = router;

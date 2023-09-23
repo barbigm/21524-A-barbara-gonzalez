@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const descripcion = document.querySelector("#detalle-post");
   const url_imagen = document.querySelector("#url-img");
   const fecha = document.querySelector("#fecha");
+  const autor = document.querySelector("#autor");
   const cerrarModalBtn = document.getElementById("close");
 
   cerrarModalBtn.addEventListener("click", function () {
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   descripcion.value = publicacion.descripcion;
   url_imagen.value = publicacion.url_imagen;
   fecha.value = publicacion.fecha;
+  autor.value = publicacion.autor;
 });
 
 formGuardar.addEventListener("submit", async (e) => {
@@ -48,6 +50,7 @@ formGuardar.addEventListener("submit", async (e) => {
   const descripcion = document.querySelector("#detalle-post").value;
   const url_imagen = document.querySelector("#url-img").value;
   const fecha = document.querySelector("#fecha").value;
+  const autor = document.querySelector("#autor").value;
 
   // Enviar al servidor
   const response = await fetch(`/publicacion/${id}`, {

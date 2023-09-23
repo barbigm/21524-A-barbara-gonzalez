@@ -15,8 +15,9 @@ const port = process.env.PORT || 4000;
 conectarDB();
 
 
-// Middlwares
+// Middlewares
 app.use(cors( {
+    // origin: "*" // Cualquiera puede realizar peticiones
     origin: "http://localhost:4000"
 }));
 app.use(morgan("dev"))
@@ -32,5 +33,5 @@ app.use(require('./routes/blog.routes'))
 
 
 
-// Servidor en esucha
+// Servidor en escucha
 app.listen(port, () => console.log(`Servidor corriendo en http://localhost:${port}`))

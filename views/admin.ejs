@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body class="vh-100">
+    
 
     <%-include("partials/navbar") %>
 
@@ -15,11 +16,11 @@
                 <div class="col-md-4 mx-auto">
                     <form action="#" id="form-nuevo">
                         <div class="mb-3">
-                            <input type="text" id="titulo" placeholder="titulo" class="form-control">
+                            <input type="text" id="titulo" placeholder="Título" class="form-control">
                         </div>
                        
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="detalle"
+                            <textarea class="form-control" placeholder="Detalle" id="detalle"
                                 style="height: 100px"></textarea>
                             <label for="floatingTextarea2">Detalle</label>
                         </div>
@@ -32,8 +33,12 @@
                             <input type="date" id="fecha_publicacion" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <input type="text" id="autor" placeholder="Autor" class="form-control">
+                        </div>
+
                         <button type="submit" class="btn btn-sm btn-primary">
-                            Guardar
+                            Publicar
                         </button>
                     </form>
                 </div>
@@ -43,7 +48,7 @@
 
 
 
-
+    
     <script src="/js/admin.js" type="module"></script>
-
+    
     <%-include("partials/footer") %>
